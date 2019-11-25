@@ -16,7 +16,12 @@ class Game extends React.Component {
     };
   }
 
-  // TODO: create a componentDidMount() which will set the current time
+  componentDidMount() {
+    const time = this.setCurrentTime;
+    this.setState({
+      time: time
+    });
+  }
   
   setCurrentTime = () => {
     this.setState({ time: new Date(Date.now())});
